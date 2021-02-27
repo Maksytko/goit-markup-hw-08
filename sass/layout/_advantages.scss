@@ -43,7 +43,11 @@ svg {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    // margin: -15px;
+    margin: -15px;
+  }
+
+  .advantages-list-title {
+    text-align: start;
   }
 
   .advantages-list-text {
@@ -52,7 +56,7 @@ svg {
   }
 
   .advantages-list-item {
-    // margin: 15px;
+    margin: 15px;
   }
 }
 
