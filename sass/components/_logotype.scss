@@ -5,8 +5,19 @@
   line-height: 1.166;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  &-footer {
+    margin-bottom: 20px;
+  }
 }
 
 .web-logotype {
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logotype {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }

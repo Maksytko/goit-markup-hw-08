@@ -103,8 +103,19 @@ body {
   text-decoration: none;
 }
 
+.logotype-footer {
+  margin-bottom: 20px;
+}
+
 .web-logotype {
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logotype {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 :root {
@@ -128,6 +139,17 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .address-react:focus,
+  .address-react:hover {
+    color: #2196f3;
+  }
+  .address-react:focus .svg-react,
+  .address-react:hover .svg-react {
+    fill: #2196f3;
+  }
 }
 
 .navigation-list-link {
@@ -519,6 +541,7 @@ header a {
 
 .clients-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: -15px;
 }
@@ -661,6 +684,14 @@ footer a {
   color: #ffffff;
 }
 
+.address-footer-links {
+  margin-bottom: 60px;
+}
+
+.address-footer-list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
 .footer-social-text {
   font-family: var(--main-font);
   font-style: normal;
@@ -717,7 +748,8 @@ footer a {
 }
 
 .footer-input {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
@@ -729,7 +761,6 @@ footer a {
   border-radius: 4px;
   background-color: #2f303a;
   padding-left: 15px;
-  margin-right: 12px;
   margin-bottom: 20px;
 }
 
@@ -769,6 +800,69 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.address-footer-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.address-footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .address-footer-links {
+    margin-right: 165px;
+  }
+  .footer-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    display: flex;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding-top: 12px;
+  }
+  .footer-form > div {
+    display: flex;
+  }
+  .address-footer-links {
+    margin: 0px 70px 0px 0px;
+    align-items: flex-start;
+  }
+  .address-footer {
+    text-align: start;
+  }
+  .email-input {
+    flex-direction: row;
+    align-items: center;
+  }
+  .footer-input {
+    width: 358px;
+    margin: 0px 12px 0px 0px;
+  }
+  .footer-form-text {
+    align-self: flex-start;
+  }
+  .footer-social-links {
+    margin: 0px;
+  }
+  .social-footer-item-link:hover {
+    background-color: #2196f3;
+  }
 }
 
 .backdrop {
