@@ -303,6 +303,7 @@ header a {
 @media screen and (min-width: 1200px) {
   .hero-section {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/desktop.jpg");
+    padding: 200px 0px;
   }
   .hero-title {
     font-size: 44px;
@@ -528,7 +529,8 @@ header a {
 
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .client-logo-one {
@@ -587,7 +589,7 @@ header a {
 
 .client-list-item-link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -598,17 +600,32 @@ header a {
   transition-property: border-color;
 }
 
-.client-list-item-link:hover, .client-list-item-link:focus {
+.client-list-item-link:focus {
   border-color: #2196f3;
 }
 
-.client-list-item-link:hover .client-logo-react,
 .client-list-item-link:focus .client-logo-react {
   fill: #2196f3;
 }
 
 .clients-section {
-  padding: 95px 0px;
+  padding: 60px 0px;
+}
+
+.clients-list-item {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .client-list-item-link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list-item-link {
+    width: 170px;
+  }
 }
 
 .address-footer-address {

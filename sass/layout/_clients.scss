@@ -1,6 +1,7 @@
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .client-logo-one {
@@ -54,7 +55,7 @@
 
 .client-list-item-link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -64,19 +65,33 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border-color;
 
-  &:hover,
   &:focus {
     border-color: #2196f3;
   }
 }
 
 .client-logo-react {
-  .client-list-item-link:hover &,
   .client-list-item-link:focus & {
     fill: #2196f3;
   }
 }
 
 .clients-section {
-  padding: 95px 0px;
+  padding: 60px 0px;
+}
+
+.clients-list-item {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .client-list-item-link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list-item-link {
+    width: 170px;
+  }
 }
