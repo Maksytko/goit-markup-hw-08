@@ -97,8 +97,8 @@ body {
 .logotype {
   font-family: var(--logotype-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
@@ -214,16 +214,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
-}
-
-.address-react:focus,
-.address-react:hover {
-  color: #2196f3;
-}
-
-.address-react:focus .svg-react,
-.address-react:hover .svg-react {
-  fill: #2196f3;
 }
 
 header {
@@ -626,6 +616,15 @@ header a {
   .client-list-item-link {
     width: 170px;
   }
+  .clients-section {
+    padding: 95px 0px;
+  }
+  .client-list-item-link:hover .client-logo-react {
+    fill: #2196f3;
+  }
+  .client-list-item-link:hover {
+    border-color: #2196f3;
+  }
 }
 
 .address-footer-address {
@@ -662,15 +661,7 @@ footer a {
   color: #ffffff;
 }
 
-.address-footer {
-  margin-top: 20px;
-}
-
-.address-footer-list-item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-text {
+.footer-social-text {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -680,10 +671,12 @@ footer a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-footer-list {
   display: flex;
+  justify-content: center;
 }
 
 .social-footer-item-link {
@@ -699,7 +692,7 @@ footer a {
   transition-property: background-color;
 }
 
-.social-footer-item-link:focus, .social-footer-item-link:hover {
+.social-footer-item-link:focus {
   background-color: #2196f3;
 }
 
@@ -707,25 +700,9 @@ footer a {
   margin-right: 10px;
 }
 
-.footer-list {
-  display: flex;
-  align-items: flex-start;
-}
-
-.footer-links {
+.footer-social-links {
   padding-top: 12px;
-  margin-left: 70px;
-}
-
-.footer-form {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  padding-top: 12px;
-}
-
-.footer-form > div {
-  display: flex;
+  margin-bottom: 60px;
 }
 
 .footer-form-text {
@@ -736,14 +713,15 @@ footer a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.03em;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -752,6 +730,7 @@ footer a {
   background-color: #2f303a;
   padding-left: 15px;
   margin-right: 12px;
+  margin-bottom: 20px;
 }
 
 .footer-input::placeholder {
@@ -784,6 +763,12 @@ footer a {
   width: 20px;
   height: 20px;
   fill: #ffffff;
+}
+
+.email-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .backdrop {

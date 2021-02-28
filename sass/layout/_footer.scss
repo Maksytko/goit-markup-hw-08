@@ -34,17 +34,17 @@ a {
   }
 }
 
-.address-footer {
-  margin-top: 20px;
-}
+// .address-footer {
+//   margin-top: 20px;
+// }
 
-.address-footer-list-item {
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
+// .address-footer-list-item {
+//   &:not(:last-child) {
+//     margin-bottom: 10px;
+//   }
+// }
 
-.footer-text {
+.footer-social-text {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -54,10 +54,12 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-footer-list {
   display: flex;
+  justify-content: center;
 }
 
 .social-footer-item-link {
@@ -72,8 +74,7 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 
-  &:focus,
-  &:hover {
+  &:focus {
     background-color: #2196f3;
   }
 }
@@ -84,26 +85,27 @@ a {
   }
 }
 
-.footer-list {
-  display: flex;
-  align-items: flex-start;
-}
+// .footer-list {
+//   display: flex;
+//   align-items: flex-start;
+// }
 
-.footer-links {
+.footer-social-links {
   padding-top: 12px;
-  margin-left: 70px;
+  // margin-left: 70px;
+  margin-bottom: 60px;
 }
 
-.footer-form {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  padding-top: 12px;
+// .footer-form {
+//   display: flex;
+//   flex-direction: column;
+//   margin-left: auto;
+//   padding-top: 12px;
 
-  & > div {
-    display: flex;
-  }
-}
+//   & > div {
+//     display: flex;
+//   }
+// }
 
 .footer-form-text {
   font-weight: 700;
@@ -113,14 +115,15 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgb(255, 255, 255);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -129,6 +132,7 @@ a {
   background-color: #2f303a;
   padding-left: 15px;
   margin-right: 12px;
+  margin-bottom: 20px;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -163,4 +167,10 @@ svg {
     height: 20px;
     fill: #ffffff;
   }
+}
+
+.email-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

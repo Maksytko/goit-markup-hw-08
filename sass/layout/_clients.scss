@@ -94,4 +94,20 @@
   .client-list-item-link {
     width: 170px;
   }
+
+  .clients-section {
+    padding: 95px 0px;
+  }
+
+  .client-logo-react {
+    .client-list-item-link:hover & {
+      fill: #2196f3;
+    }
+  }
+
+  .client-list-item-link {
+    &:hover {
+      border-color: #2196f3;
+    }
+  }
 }
