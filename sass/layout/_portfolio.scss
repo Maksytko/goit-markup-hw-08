@@ -13,7 +13,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color, box-shadow, color;
 
-  &:hover,
   &:focus {
     color: #ffffff;
     background-color: #2196f3;
@@ -46,26 +45,28 @@
 }
 
 .portfolio-section {
-  padding-top: 70px;
-  padding-bottom: 95px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filters-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 35px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .filters-list-item {
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 8px;
   }
 }
 
 .portfolio-list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: -15px;
-  flex-wrap: wrap;
 }
 
 .portfolio-img {
@@ -80,7 +81,7 @@
 .portfolio-img-text {
   position: absolute;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 18px;
   line-height: 1.556;
   letter-spacing: 0.03em;
@@ -88,7 +89,7 @@
   background-color: rgba(33, 150, 243, 0.9);
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -114,7 +115,7 @@
   margin: 15px;
   background: #ffffff;
   border: 1px solid #eeeeee;
-  width: 370px;
+  width: 450px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: box-shadow;
@@ -123,5 +124,19 @@
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media screen and (min-width: 768) {
+  .portfolio-list {
+    flex-direction: row;
+  }
+
+  .portfolio-list-item-link {
+    width: 354px;
+  }
+
+  .portfolio-img-text {
+    width: 354px;
   }
 }
