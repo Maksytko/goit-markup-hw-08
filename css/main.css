@@ -408,6 +408,7 @@ header a {
 }
 
 .work-section {
+  display: none;
   padding-bottom: 95px;
 }
 
@@ -442,6 +443,12 @@ header a {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .work-section {
+    display: inherit;
+  }
 }
 
 .members-list-title {
@@ -497,6 +504,10 @@ header a {
 .social-list {
   display: flex;
   justify-content: space-between;
+}
+
+.members-list-img {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

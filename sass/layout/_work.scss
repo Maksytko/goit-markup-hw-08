@@ -1,4 +1,5 @@
 .work-section {
+  display: none;
   padding-bottom: 95px;
 }
 
@@ -33,4 +34,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .work-section {
+    display: inherit;
+  }
 }
