@@ -158,20 +158,34 @@ header {
   display: none;
 }
 
-.burger-button {
+.chosen-navigation-list-link {
+  color: #2196f3;
+}
+
+.burger-button,
+.close-mobile-menu-button {
   width: 40px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: transparent;
+  padding: 0px;
   border: none;
 }
 
-.burger-button svg {
+.burger-button svg,
+.close-mobile-menu-button svg {
   width: 24px;
   height: 16px;
 }
 
-.burger-button:focus svg {
+.burger-button:focus svg,
+.close-mobile-menu-button:focus svg {
   fill: #2196f3;
+}
+
+.close-mobile-menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .header-list {
@@ -184,7 +198,85 @@ header {
   margin: 0px 0px 10px;
 }
 
+.mobile-menu-nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu-nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-nav {
+  margin-bottom: 302px;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  max-width: 480px;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 48px 40px;
+  overflow: scroll;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  transition: transform 300ms;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(-50%) translateY(0%);
+}
+
+.mobile-menu-address-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mobile-menu-address-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-menu-address-item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-address {
+  margin-bottom: 64px;
+}
+
+.mobile-menu-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-menu-social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mobile-menu-social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
   .header {
     padding: 26px 0px;
   }
@@ -940,8 +1032,11 @@ footer a {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 90%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 609px;
+  overflow: scroll;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -983,7 +1078,7 @@ footer a {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -997,8 +1092,8 @@ footer a {
 
 .modal-form-input-label {
   font-weight: normal;
-  font-size: 12px;
-  line-height: 1.166;
+  font-size: 14px;
+  line-height: 1.142;
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
@@ -1066,8 +1161,8 @@ footer a {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
   margin-bottom: 30px;
@@ -1100,6 +1195,7 @@ footer a {
 }
 
 .modal-form-label-policy > a {
+  display: flex;
   color: #2196f3;
   margin-left: 4px;
 }
@@ -1120,7 +1216,30 @@ footer a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-submit-button:focus, .modal-form-submit-button:hover {
+.modal-form-submit-button:focus {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-submit-button:hover {
+    background-color: #188ce8;
+  }
+  .modal-form-label-policy {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+    overflow: inherit;
+  }
+  .modal-form-input-label {
+    font-size: 12px;
+    line-height: 1.166;
+  }
+  .modal-form > b {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 /*# sourceMappingURL=main.css.map */
