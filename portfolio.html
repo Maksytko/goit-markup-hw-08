@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/portfolio.min.css">
 </head>
 <body>
-    <!-- <header>
+    <header>
         <div class="container header-list">
             <nav class="navigation">
                 <a href="/" lang="en" class="logotype"><span class="web-logotype">Web</span>Studio</a>
@@ -26,6 +26,11 @@
                     </li>
                 </ul>
             </nav>
+            <button class="burger-button" type="button" data-menu-button>
+                <svg>
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
             <address class="address-header">
                 <ul class="address-list list">
                     <li class="address-list-item">
@@ -47,7 +52,47 @@
                 </ul>
             </address>
         </div>
-    </header> -->
+        <div class="mobile-menu" data-menu>
+            <button type="button" class="close-mobile-menu-button" data-menu-close>
+                <svg class="close-mobile-menu">
+                    <use href="./images/sprite.svg#icon-Vector"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu-nav list">
+                <li class="mobile-menu-nav-item">
+                    <a href="./index.html" class="mobile-menu-nav-link link">Студия</a>
+                </li>
+                <li class="mobile-menu-nav-item">
+                    <a href="./portfolio.html" class="mobile-menu-nav-link chosen-navigation-list-link link">Портфолио</a>
+                </li>
+                <li class="mobile-menu-nav-item">
+                    <a href="" class="mobile-menu-nav-link link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-address list">
+                <li class="mobile-menu-address-item">
+                    <a href="tel:+380961111111" class="mobile-menu-address-tel link">+38 096 111 11 11</a>
+                </li>
+                <li class="mobile-menu-address-item">
+                    <a href="mailto:info@devstudio.com" class="mobile-menu-address-mail link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-social list">
+                <li class="mobile-menu-social-item">
+                    <a class="mobile-menu-social-link link">Instagram</a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a class="mobile-menu-social-link link">Twitter</a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a class="mobile-menu-social-link link">Facebook</a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a class="mobile-menu-social-link link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <main>
         <section class="portfolio-section">
             <div class="container">
@@ -287,20 +332,18 @@
             </div>
         </section>
     </main>
-    <!-- <footer>
+    <footer>
         <div class="container footer-list">
-            <div>
-                <a href="/" lang="en" class="logotype"><span class="web-logotype">Web</span>Studio</a>
+            <div class="address-footer-links">
+                <a href="/" lang="en" class="logotype logotype-footer"><span class="web-logotype">Web</span>Studio</a>
                 <address class="address-footer">
                     <ul class="address-footer-list list">
                         <li class="address-footer-list-item">
-                            <a href="https://goo.gl/maps/WL92YApWZY9KQQxK7" class="address-footer-address address-react link">г.
-                                Киев,
+                            <a href="https://goo.gl/maps/WL92YApWZY9KQQxK7" class="address-footer-address address-react link">г. Киев,
                                 пр-т Леси Украинки, 26</a>
                         </li>
                         <li class="address-footer-list-item">
-                            <a href="mailto:info@example.com"
-                                class="address-footer-mail address-react link">info@example.com</a>
+                            <a href="mailto:info@example.com" class="address-footer-mail address-react link">info@example.com</a>
                         </li>
                         <li class="address-footer-list-item">
                             <a href="tel:+380991111111" class="address-footer-tel address-react link">+38 099 111 11 11</a>
@@ -308,8 +351,8 @@
                     </ul>
                 </address>
             </div>
-            <div class="footer-links">
-                <p class="footer-text">присоединяйтесь</p>
+            <div class="footer-social-links">
+                <p class="footer-social-text">присоединяйтесь</p>
                 <ul class="social-footer-list list">
                     <li class="social-footer-list-item">
                         <a href="" class="social-footer-item-link">
@@ -343,7 +386,7 @@
             </div>
             <form action="#" class="footer-form">
                 <p class="footer-form-text">Подпишитесь на рассылку</p>
-                <div>
+                <div class="email-input">
                     <input type="email" name="user-email" placeholder="E-mail" class="footer-input">
                     <button type="submit" class="submit-footer-button">
                         Подписаться
@@ -353,7 +396,8 @@
                     </button>
                 </div>
             </form>
-        </div>
-    </footer> -->
+        </div>   
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

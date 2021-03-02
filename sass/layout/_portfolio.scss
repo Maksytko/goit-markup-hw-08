@@ -136,6 +136,16 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .filters-list-item:not(:nth-last-child(1)) {
+    margin-top: 15px;
+  }
+
+  .filters-list-item:not(:nth-last-child(2)) {
+    margin-top: 15px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .filters-list {
     justify-content: center;
